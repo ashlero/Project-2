@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Responsive Layouts</title>
+  <title>La Pomme Bakery</title>
   <meta name="description" content="This site will serve as the hub for many sub responsive layouts">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -20,11 +20,34 @@
   <link rel="stylesheet" href="css/main.css">
 
   <meta name="theme-color" content="#fafafa">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Beth+Ellen&family=Cal+Sans&family=Fascinate&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <!-- Place your site's HTML here -->
-  <p>This text will display on your site! Jan 19</p>
+   <nav class="navbar">
+    <span class="site-name">La Pomme Bakery</span>
+    <button class="hamburger" aria-expanded="false" aria-controls="hamburger">
+      <span class="hamburger-icon">☰</span> 
+    </button>
+    <ul id="main-menu" class="menu">
+      <a href="#">Home</a></li>
+      <a href="#">About</a></li>
+      <a href="#">Menu</a></li>
+      <a href="#">Order</a></li>
+      <a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Our Website</h1>
+      <p>Discover amazing things and explore our services.</p>
+      <button>Learn More</button>
+  </div>
   <script src="js/main.js"></script>
 </body>
 

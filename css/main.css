@@ -2,51 +2,74 @@
 body {
     background-color: #f2eee8 ;
 }
-.navbar {
-  background-color: #4e0a0b;
-  padding: 15px;
+/* base */
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 16px;
+  border-bottom:1px solid #ddd;
+  background:#fff;
+  position:relative;
 }
 
-.nav-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.brand{
+  text-decoration:none;
+  color:#111;
+  font-weight:700;
+  font-size:18px;
 }
 
-.site-name {
- font-family: "Beth Ellen", cursive;
- font-weight: 400;
- font-style: normal;
- color: #e38792;
- font-size: 20px;
+.hamburger{
+  padding:0;
+  margin:0;
+  border:none;
+  background:none;
+  font-size:26px;
+  line-height:1;
+  cursor:pointer;
 }
 
-.hamburger-icon {
-  font-size: 30px;
-  cursor: pointer;
-  color: #e38792;
-  display: none;
+/* mobile default: hidden links until toggled */
+.links{
+  display:none;
+  position:absolute;
+  top:58px;
+  right:16px;
+  background:#fff;
+  border:1px solid #ddd;
+  border-radius:12px;
+  padding:10px;
+  min-width:180px;
 }
 
-.hamburger {
-  display: block;
-  color: #e38792;
+.links a{
+  display:block;
+  padding:10px 12px;
+  text-decoration:none;
+  color:#111;
 }
 
-.menu {
- display: block; /* Hide the menu by default */
+.links.open{
+  display:block;
 }
 
-.menu.expanded {
-  display: block;
-}
+/* desktop: show links horizontally, no hamburger */
+@media (min-width: 768px){
+  .hamburger{ display:none; }
 
-@media (max-width: 768px) {
-  .menu {
-    display: none; /* Show the menu on smaller screens */
+  .links{
+    display:flex;
+    position:static;
+    border:none;
+    padding:0;
+    min-width:auto;
+    gap:18px;
   }
-  .hamburger-icon {
-    display: block; /* Show the hamburger button on smaller screens */
+
+  .links a{
+    display:inline-block;
+    padding:0;
   }
 }
 

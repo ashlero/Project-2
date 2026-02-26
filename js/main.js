@@ -1,9 +1,8 @@
 // JS scripts placed here
-const hamburger = document.querySelector('.hamburger-icon');
-const menu = document.querySelector('.menu');
+const btn = document.getElementById("hamburger");
+const links = document.getElementById("links");
 
-hamburger.addEventListener('click', () => {
-  const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
-  hamburger.setAttribute('aria-expanded',!expanded);
-  menu.classList.toggle('expanded');
-});
+btn.addEventListener("click", () => {
+    links.classList.toggle("open");
+    btn.setAttribute("aria-expanded", links.classList.contains("open"));
+ });

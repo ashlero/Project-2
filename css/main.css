@@ -265,7 +265,9 @@ body {
 }
 
 .banner{
-  width: 100%;
+   width: 100vw;                     /* full viewport width */
+  margin-left: calc(50% - 50vw);   /* breakout trick */
+  margin-right: calc(50% - 50vw);
 }
 
 .banner-img{
@@ -277,20 +279,20 @@ body {
 .banner-bar{
   width: 100%;
   height: 40px;
+  padding-top: 7px;
+  padding-bottom: 7px;
 
-  background-color: #e38792;
-  color: #4e0a0b;
+  background-color: #4e0a0b;
+  color: #e38792;
+  border-radius: 20px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  font-family: "Aboreto", system-ui;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 15px;
-  padding-right: 5px;
-  padding-left: 5px;
+  font-family: "Fraunces", serif;
+  font-size: 13px;
+  text-transform: uppercase;
 }
 
 .order-section{
@@ -299,11 +301,6 @@ body {
 
   margin-top: 0;         /* <-- IMPORTANT */
   padding-top: 80px;     /* choose whatever spacing you want */
-
-  background-image: url(../img/pattern.jpg);
-  background-size: cover;
-  background-position: center;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -326,7 +323,7 @@ body {
   margin: auto;
 
   background: white;
-  padding: 0px;
+  padding: 40px;
   border-radius: 16px;
 
   box-shadow:

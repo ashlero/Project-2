@@ -1,6 +1,7 @@
 /* Place CSS styles here */
 body {
     background-color: #f2eee8 ;
+    margin: 0;
 }
 /* base */
 .nav{
@@ -186,22 +187,151 @@ body {
   }
 }
 
-.order-section{
+.featured{
   padding: 80px 20px;
   background: #fffaf8;
+  text-align: center;
 }
 
-.order-container{
-  max-width: 600px;
-  margin: auto;
+.featured-title{
+  font-family: "Beth Ellen", cursive;
+  font-size: 2rem;
+  color: #4e0a0b;
+  margin-bottom: 40px;
+}
 
+.featured-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.featured-card{
   background: white;
-  padding: 40px;
   border-radius: 16px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
 
   box-shadow:
     0 4px 20px rgba(0,0,0,0.06),
     0 1px 3px rgba(0,0,0,0.08);
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.featured-card:hover{
+  transform: translateY(-6px);
+  box-shadow:
+    0 12px 30px rgba(0,0,0,0.12),
+    0 4px 10px rgba(0,0,0,0.08);
+}
+
+.featured-card img{
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.featured-content{
+  padding: 20px;
+  text-align: left;
+}
+
+.featured-content h3{
+  font-family: "Fraunces", serif;
+  color: #4e0a0b;
+  margin-bottom: 8px;
+}
+
+.featured-content p{
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.featured-link{
+  font-family: "Fraunces", serif;
+  color: #e38792;
+  font-weight: 500;
+}
+
+/* mobile */
+@media (max-width: 768px){
+  .featured-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+.banner{
+  width: 100%;
+}
+
+.banner-img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.banner-bar{
+  width: 100%;
+  height: 40px;
+
+  background-color: #e38792;
+  color: #4e0a0b;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Aboreto", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.order-section{
+  position: relative;
+  z-index: 1;
+
+  margin-top: 0;         /* <-- IMPORTANT */
+  padding-top: 80px;     /* choose whatever spacing you want */
+
+  background-image: url(../img/pattern.jpg);
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.order-section::before{
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: 0;
+}
+
+.order-container{
+  position: relative;
+  z-index: 1;
+
+  max-width: 600px;
+  margin: auto;
+
+  background: white;
+  padding: 0px;
+  border-radius: 16px;
+
+  box-shadow:
+    0 20px 50px #00000026,
+    0 4px 10px #00000014;
 }
 
 .order-title{
@@ -211,13 +341,6 @@ body {
   font-size: 2rem;
   margin-bottom: 8px;
   color: #4e0a0b;
-}
-
-.order-intro{
-  margin-bottom: 28px;
-  color: #4e0a0b;
-  font-family: "Fraunces", serif;
-  font-size: 15px;
 }
 
 .order-form{
@@ -342,3 +465,4 @@ textarea:focus{
 
   pointer-events: auto;
 }
+
